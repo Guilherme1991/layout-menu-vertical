@@ -46,7 +46,7 @@
         .fa-bars{
             position: absolute;
             right: 10px;
-            padding: 10px;
+            padding: 20px;
             font-size: 40px;
             color: white;
         }
@@ -75,6 +75,20 @@
         .title p{
             color: white;
         }
+        .container{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container img{
+            padding: 20px;
+            width: 500px;
+        }
+        .txt{
+            padding: 20px;
+            width: 600px;
+        }
         @keyframes menu{
             from{
               margin-left: -200px;
@@ -89,15 +103,43 @@
             background-size: cover;
         }
         section{
-
+            background: #f1f1f1;
         }
         footer{
             height: 200px;
             background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+        .rape{
+            width: 80%;
+            height: 200px;
+            background: white;
+            position: relative;
+            top: -100px;
+        }
+        .corp{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .txt h2{
+            margin-bottom: 20px;
+        }
+        .txt button{
+            width: 200px;
+            height: 42px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        .txt button:hover{
+            background: black;
+            color: white;
         }
         @media only screen and (max-width: 640px){
             .active{
-                width: 30%;
+                width: 20%;
                 align-items: center;
             }
             .title, .title-2{
@@ -108,6 +150,22 @@
             .title-2{
                 top: 400px;
             }
+            .container{
+                flex-direction: column;
+
+            }
+            .container img{
+                padding: 0px;
+            }
+            .txt{
+                width: 100%;
+            }
+            .rape{
+                display: none;
+            }
+            .container img{
+            width: 400px;
+        }
         }
     </style>
     <header>
@@ -140,12 +198,27 @@
     </header>
 
     <section>
-
+        <div class="container">
+        <img src="img/tiger-2.jpg" alt="">
+        <div class="txt">
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Ipsa in culpa dolorem deleniti, ad vitae iste minus doloribus est 
+              optio unde, esse voluptate! 
+              Ab odit dolorum nemo nam, quidem tempora.</p>
+              <button>SAIBA MAIS</button>
+        </div>
+        </div>
     </section>
 
     <footer>
+         <div class="rape">
 
+         </div>
     </footer>
+    <div class="corp">
+        <p>desenvolvido por Guilherme Luiz | 2019</p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"
 			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -156,6 +229,9 @@
                     $('.fa-bars').click(function(){
                       $('nav').toggleClass('active');
                     })
+                    $('#navbar img').hide().delay('fast').fadeIn('slow');
+                    $('.title').hide().delay('fast').fadeIn('fast');
+                    $('.title-2').hide().delay('slow').fadeIn('slow');
                   })
               </script>
 </body>
